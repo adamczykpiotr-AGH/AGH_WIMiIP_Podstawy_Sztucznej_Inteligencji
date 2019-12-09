@@ -99,5 +99,5 @@ void Function::print(std::vector<double>* outcome) {
 
 	params = params.substr(0, params.length() - 2); //remove last ", "
 
-	std::cout << "f(" << params << ") = " << m_function(*outcome) << "\n\n";
+	std::cout << "f(" << params << ") = " << (-1) * m_function(*outcome) << "\n\n";
 }
