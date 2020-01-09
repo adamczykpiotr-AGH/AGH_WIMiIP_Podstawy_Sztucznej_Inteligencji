@@ -183,9 +183,11 @@ void gealib::ga::evaluate()
 // Sorts current population by the fitness function result
 void gealib::ga::sort_current()
 {
+	//sort that lower is better
+
 	std::sort(current.begin(), current.end(),
 		[](const chromo_ptr a, const chromo_ptr b)
-	{ return (a->fitness > b->fitness); });
+	{ return (a->fitness < b->fitness); });
 }
 
 // Performs an iteration step

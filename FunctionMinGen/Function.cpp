@@ -4,21 +4,21 @@ ftype Function::McCormick_(vector<ftype>& v) {
 	ftype x = v[0];
 	ftype y = v[1];
 
-	return (ftype) (-1) * (sin(x + y) + (x - y) * (x - y) - 1.5 * x + 2.5 * y + 1);
+	return (ftype) (sin(x + y) + (x - y) * (x - y) - 1.5 * x + 2.5 * y + 1);
 }
 
 ftype Function::Himmelblau_(vector<ftype>& v) {
 	ftype x = v[0];
 	ftype y = v[1];
 
-	return (ftype) (-1) * (x*x + y - 11) * (x * x + y - 11) + (x + y * y - 7) * (x + y * y - 7);
+	return (ftype) (x*x + y - 11) * (x * x + y - 11) + (x + y * y - 7) * (x + y * y - 7);
 }
 
 ftype Function::Matyas_(vector<ftype>& v) {
 	ftype x = v[0];
 	ftype y = v[1];
 	
-	return (ftype) (-1) * (0.26 * (x * x + y * y) - 0.48 * x * y);
+	return (ftype) (0.26 * (x * x + y * y) - 0.48 * x * y);
 }
 
 Function::Function(unsigned short function, std::vector<double> precision, double mutationRate) {
@@ -99,5 +99,5 @@ void Function::print(std::vector<double>* outcome) {
 
 	params = params.substr(0, params.length() - 2); //remove last ", "
 
-	std::cout << "f(" << params << ") = " << (-1) * m_function(*outcome) << "\n\n";
+	std::cout << "f(" << params << ") = " << m_function(*outcome) << "\n\n";
 }
